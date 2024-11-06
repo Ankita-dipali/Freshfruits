@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freshy Fruits - The juicy Basket</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+  <style>
+    div.box {
+      background-color: bisque;
+    }
+
+
+    .card-img-top {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+      .carousel-inner {
+        max-height: 90vh;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .carousel-inner {
+        min-height: 18vh;
+      }
+    }
+
+    footer {
+      background-color: silver;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-warning bg-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="logo1.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top">
+        <b class="text-danger">Freshy</b><b class="text-success">Fruits</b>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active"  href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link " href="contact.html" aria-current="page">Contact Us</a>
+          </li>
+         
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="mx-2 my-2">
+          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</button>
+          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#SignUpModal">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="LoginModalLabel">Login to Freshy Fruits</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+          </div>
+          <button type="submit" class="btn btn-warning w-100">Login</button>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="SignUpModalLabel">Get an Freshy Fruits account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="signupForm">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
+          </div>
+          <button type="submit" class="btn btn-warning w-100">Sign Up</button>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="carouselExampleRide" class="carousel slide my-2" data-bs-ride="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active ">
+
+        <img src="fruit9.jpg" class="d-block w-100 img-fluid" alt="...">
+
+        <div class="carousel-caption d-flex justify-content-center align-items-center h-100 bg-dark opacity-50 ">
+          <h1 text-dark><b>Welcome to Freshy Fruits! </b></h1>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+
+        <img src="fruit7.jpg" class="d-block w-100 img-fluid" alt="...">
+
+        <div class="carousel-caption d-flex justify-content-center align-items-center h-100 bg-dark opacity-50   ">
+          <h1><b>Discover the Power of Fruits!</b></h1>
+        </div>
+      </div>
+      <div class="carousel-item">
+
+        <img src="fruit4.jpg" class="d-block w-100 img-fluid" alt="...">
+
+        <div class="carousel-caption d-flex justify-content-center align-items-center h-100 bg-dark opacity-50  ">
+          <h1><b>Freshness Delivered by Nature!</b></h1>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="box ">
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2 ">
+        <div class="card">
+          <img src="apple.jpg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>APPLE</b>
+              <p>(per 500 grams) <br><b> &#8377 110 </b><strike>(&#8377 130)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="orange.jpg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>ORANGE</b>
+              <p>(per 500 grams) <br><b> &#8377 150 </b><strike>(&#8377 180)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="grapes.jpg" class="card-img-top img-fluid" alt="Fruit 1">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>GRAPES</b>
+              <p>(per 500 grams) <br><b> &#8377 240 </b><strike>(&#8377 270)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="pinaple.jpeg" class="card-img-top img-fluid" alt="Fruit 2">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>PINEAPPLE</b>
+              <p>(per 500 grams) <br><b> &#8377 45</b><strike>(&#8377 50)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="banana.jpeg" class="card-img-top" alt="Fruit 3">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>BANANA</b>
+              <p>(per 500 grams) <br><b> &#8377 70 </b><strike>(&#8377 80)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2 ">
+        <div class="card">
+          <img src="watermelon.jpg" class="card-img-top" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>WATERMELON</b>
+              <p>(per 500 grams) <br><b> &#8377 60 </b><strike>(&#8377 70)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="muskmelon.jpeg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>MUSKMELON</b>
+              <p>(per 1000 grams) <br><b> &#8377 40 </b><strike>(&#8377 50)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2 ">
+        <div class="card">
+          <img src="papaya.jpg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>PAPAYA</b>
+              <p>(per 500 grams) <br><b> &#8377 45 </b><strike>(&#8377 50)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="coconut.webp" class="card-img-top img-fluid" alt="Fruit 1">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>COCONUT</b>
+              <p>(per 1 piece) <br><b> &#8377 35 </b><strike>(&#8377 40)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="lime.jpg" class="card-img-top img-fluid" alt="Fruit 2">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>LIME</b>
+              <p>(per 500 grams) <br><b> &#8377 40 </b><strike>(&#8377 50 )</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2 ">
+        <div class="card">
+          <img src="ra.jpeg" class="card-img-top img-fluid" alt="Fruit 3">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>RASPBERRY</b>
+              <p>(per 125 grams) <br><b> &#8377 300 </b><strike>(&#8377 350)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="mulberry.jpeg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>MULBERRY</b>
+              <p>(per 125 grams) <br><b> &#8377 100 </b><strike>(&#8377 110)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2 ">
+        <div class="card">
+          <img src="mango.jpg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>MANGO</b>
+              <p>(per 12 piece) <br><b> &#8377 800 </b><strike>(&#8377 1000 )</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="cherry.jpeg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>CHERRY</b>
+              <p>(per 250 grams) <br><b> &#8377 150 </b><strike>(&#8377 160)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="kiwi.jpg" class="card-img-top" alt="Fruit 1">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>KIWI</b>
+              <p>(per 3 piece) <br><b> &#8377 150 </b><strike>(&#8377 160)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="straberry.jpeg" class="card-img-top" alt="Fruit 2">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>STRAWBERRY</b>
+              <p>(per 250 grams) <br><b> &#8377 105 </b><strike>(&#8377 120)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2 ">
+        <div class="card">
+          <img src="avacado.jpeg" class="card-img-top" alt="Fruit 3">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>AVOCADO</b>
+              <p>(per 1 piece) <br><b> &#8377 80</b><strike>(&#8377 100)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="pair.jpeg" class="card-img-top" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>PEAR</b>
+              <p>(per 500 grams) <br><b> &#8377 100 </b><strike>(&#8377 120)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="lichi.jpeg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>LICHI</b>
+              <p>(per 250 grams) <br><b> &#8377 160 </b><strike>(&#8377 170 )</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="jackfruit.jpeg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>JACKFRUIT</b>
+              <p>(per 1000 grams) <br><b> &#8377 70 </b><strike>(&#8377 80)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="jamun.jpeg" class="card-img-top img-fluid" alt="Fruit 1">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>JAVA PLUM</b>
+              <p>(per 250 100) <br><b> &#8377 157 </b><strike>(&#8377 125)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="pomogranate.jpg" class="card-img-top img-fluid" alt="Fruit 2">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>POMEGRANATE</b>
+              <p>(per 500 grams) <br><b> &#8377 140 </b><strike>(&#8377 160)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="chikky.jpeg" class="card-img-top img-fluid" alt="Fruit 3">
+          <div class="card-body bg-warning card  text-center">
+            <h6 class="card-title "><b>CHIKKU</b>
+              <p>(per 500 grams) <br><b> &#8377 60 </b><strike>(&#8377 70)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="tamrind.jpeg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>TAMARIND</b>
+              <p>(per 250 grams) <br><b> &#8377 100 </b><strike>(&#8377 120)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="fig.webp" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>FIG</b>
+              <p>(per 500 grams) <br><b> &#8377 70 </b><strike>(&#8377 80)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="guava.jpg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>GUAVA</b>
+              <p>(per 500 grams) <br><b> &#8377 50 </b><strike>(&#8377 60)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="passion fruit.jpeg" class="card-img-top img-fluid" alt="Fruit 1">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>PASSION FRUIT</b>
+              <p>(per 500 grams) <br><b> &#8377 130 </b><strike>(&#8377 150)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2">
+        <div class="card">
+          <img src="dragon fruit.jpeg" class="card-img-top img-fluid" alt="Fruit 2">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>DRAGON FRUIT</b>
+              <p>(per 1 piece) <br><b> &#8377 78 </b><strike>(&#8377 105)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2 ">
+        <div class="card">
+          <img src="apricot.jpeg" class="card-img-top img-fluid" alt="Fruit 3">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>APRICOT</b>
+              <p>(per 200 grams) <br><b> &#8377 250 </b><strike>(&#8377 260)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-6  mb-2 ">
+        <div class="card">
+          <img src="avla.jpeg" class="card-img-top img-fluid" alt="Fruit 4">
+          <div class="card-body bg-warning card text-center">
+            <h6 class="card-title "><b>AMLA</b>
+              <p>(per 500 grams) <br><b> &#8377 110 </b><strike>(&#8377 120)</strike></p>
+            </h6>
+            <button type="button" class="btn btn-secondary"><b>ADD TO CART</b><a class="navbar-brand" href="#">
+                <img src="add5.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-middle">
+              </a></button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+  <footer class=" text-center text-lg-start  ">
+    <div class="container p-4">
+      <div class="row justify-content-center text-center">
+
+        <!-- Column 1: Brand Icon and Information (Vertically Centered) -->
+        <div class="col-lg-3 col-md-12 mb-4 mb-md-0 d-flex flex-column align-items-center">
+          <!-- Icon or Logo -->
+
+          <a class="navbar-brand" href="#">
+            <img src="logo1.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-center mb-2">
+            <h4 class="mb-0"><b class="text-danger">Freshy</b><b class="text-success">Fruits</b></h4>
+          </a>
+          <!-- Brand Information -->
+          <div>
+            <p class="text-muted mb-0 text-dark">
+              At Freshy fruits, we provide fresh, high-quality fruits sourced directly from trusted farmers. Our mission
+              is to make healthy, delicious fruits accessible to everyone while supporting sustainable agriculture.
+              Discover nature's finest produce with us!
+
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2: Explore Section -->
+        <div class="col-lg-2 col-md-2 mb-4 mb-md-0">
+          <h5 class="text-"><b>Quick links </b>
+            <hr>
+          </h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#!" class="text-dark">Know more about us</a></li>
+            <li><a href="#!" class="text-dark">Visit store</a></li>
+            <li><a href="#!" class="text-dark">Let's connect</a></li>
+            <li><a href="#!" class="text-dark">Know our process</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 mb-4 mb-md-0">
+          <h5 class="text-dark"><b>Site links</b>
+            <hr>
+          </h5>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#!" class="text-dark">Privacy policy </a></li>
+            <li><a href="#!" class="text-dark"> Cancellation/Refund policy</a></li>
+            <li><a href="#!" class="text-dark">Terms & Conditions</a></li>
+            <li><a href="#!" class="text-dark">Shipping policy</a></li>
+          </ul>
+        </div>
+        <!-- Column 2: Explore Section -->
+        <div class="col-lg-2 col-md-2 mb-4 mb-md-0">
+          <h5 class="text-dark"><b>Location</b>
+            <hr>
+          </h5>
+          <ul style="list-style-type: none; padding: 0;">
+            <li>&#128222; (+91)12345678909 </li> <!-- Phone icon -->
+            <li>&#9993;info@FreshyFruits.com</li> <!-- Email icon -->
+            <li>&#128205;45, Kalyan Nagar, Pune, 123445, India</li> <!-- Location icon -->
+          </ul>
+        </div>
+
+
+        <!-- Column 3: Newsletter Subscription -->
+        <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-dark"> <b>Subscribe </b>
+            <hr>
+          </h5>
+          <form class="d-flex justify-content-center">
+            <input type="email" class="form-control" placeholder="Enter your email" style="max-width: 200px;" />
+            <br>
+            <button class="btn btn-warning ms-2" type="submit">
+              Subscribe
+            </button>
+          </form>
+          <small class="text-muted d-block mt-2">Get the latest fruit updates!</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center p-3 bg-dark text-light">
+      © 2024 FreshyFruits - All Rights Reserved
+    </div>
+  </footer>
+  </div>
+  <script src="http://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>
